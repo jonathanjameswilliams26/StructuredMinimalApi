@@ -16,6 +16,7 @@ public static class ConfigureServices
 		builder.Services.AddEndpoints();
 		builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 		builder.Services.AddDatabase(builder.Configuration);
+		builder.Services.AddControllers();
 	}
 
 	private static void AddEndpoints(this IServiceCollection services)
